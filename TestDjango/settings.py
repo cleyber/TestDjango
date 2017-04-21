@@ -76,25 +76,15 @@ WSGI_APPLICATION = 'TestDjango.wsgi.application'
 
 DATABASES = {
     'default': {
-    """
         'ENGINE': 'django.db.backends.oracle',
-        'NAME': 'XE',
+        'NAME': 'xe',
         'USER': 'django',
         'PASSWORD': 'test',
-        'HOST': 'localhost', # si es empty el por defecto es localhost
-        'PORT': '1521', # si es empty cogerá el por defecto
-    """
-    'ENGINE': 'django.db.backends.mysql',
-    'NAME': 'test_django',
-    'USER': 'root',
-    'PASSWORD': '',
-    'HOST': 'localhost', # si es empty el por defecto es localhost
-    'PORT': '3306', # si es empty cogerá el por defecto
-
+        'HOST': '', # si es empty el por defecto es localhost
+        'PORT': '' # si es empty cogerá el por defecto
     }
 }
 
-CREATE_DB  = True
 
 
 # Password validation
