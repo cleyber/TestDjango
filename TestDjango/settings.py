@@ -74,14 +74,21 @@ WSGI_APPLICATION = 'TestDjango.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.oracle',
+#         'NAME': 'xe',
+#         'USER': 'django',
+#         'PASSWORD': 'test',
+#         'HOST': '', # si es empty el por defecto es localhost
+#         'PORT': '' # si es empty cogerá el por defecto
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.oracle',
-        'NAME': 'xe',
-        'USER': 'django',
-        'PASSWORD': 'test',
-        'HOST': '', # si es empty el por defecto es localhost
-        'PORT': '' # si es empty cogerá el por defecto
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
